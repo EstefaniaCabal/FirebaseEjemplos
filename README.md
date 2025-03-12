@@ -1,4 +1,3 @@
-Aquí tienes un `README.md` más bonito y estructurado con Markdown:  
 
 ```md
 # 📚 Proyecto de Integración con Firebase - 2do Parcial  
