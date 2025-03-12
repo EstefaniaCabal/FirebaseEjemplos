@@ -1,0 +1,14 @@
+body{
+    background-color: #EAEAEA;
+    color: rgb(0, 0, 0);
+   
+}
+
+body {
+    overflow: auto;
+    scrollbar-width: none; /* Oculta la barra en Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Oculta la barra en Chrome, Edge y Safari */
+}

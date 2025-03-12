@@ -1,0 +1,68 @@
+<body>
+    <div class="catalogo">
+        <h1>Registro de empleados</h1>
+      
+        <div class="center-container">
+            <div class="col-sm-4">
+                <p>
+                    <label type="text" required>Nombre</label>
+                    <input type="text" class="form-control" [(ngModel)]="empleado.nombre"/>
+                </p>
+                <p>
+                    <label type="text" required>Profesión o Puesto</label>
+                    <input type="text" class="form-control" [(ngModel)]="empleado.puesto" />
+                </p>
+                <p>
+                    <label type="text" required>Turno</label>
+                    <select class="form-control" [(ngModel)]="empleado.turno">
+                        <option value="Matutino">Matutino</option>
+                        <option value="Vespertino">Vespertino</option>
+                    </select>
+                </p>
+        
+                <table>
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-primary" (click)="this.insertarEmpleado()">Insertar</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-warning" (click)="this.updateEmpleado()">Modificar</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" (click)="this.deleteEmpleado()">Eliminar</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    
+        <hr/>
+        <p></p>
+    
+        <h4>Listado de empleados</h4>
+        <table class="table">
+            <thead>
+                <th></th>
+                <th>Nombre</th>
+                <th>Puesto o Profesión</th>
+                <th>Turno</th>
+                <th>Seleccionar</th>
+            </thead>
+            <tbody>
+              @for (empleado of empleados; track empleado.id) {
+                  <tr>
+                      <td></td>
+                      <td>{{empleado.nombre}}</td>
+                      <td>{{empleado.puesto}}</td>
+                      <td>{{empleado.turno}}</td>
+                      <td>
+                          <button type="button" class="btn btn-primary" (click)="selectEmpleado(empleado)">Seleccionar</button>
+                      </td>
+                  </tr>
+                  
+              }
+          </tbody>
+        </table>
+    
+    </div>    
+  </body>

@@ -1,0 +1,97 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilos para la imagen del perro */
+.running-dog-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.running-dog-container img {
+    max-width: 100%;
+    height: auto;
+    animation: runningDog 5s infinite;
+}
+
+/* Animación del perro corriendo */
+@keyframes runningDog {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Estilos para la sección de información */
+.info-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+}
+
+.info-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.info-container p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.info-container strong {
+    color: #333;
+}
+
+/* Estilos para el menú (Evitar que se vean afectados por otros estilos) */
+.menu {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
